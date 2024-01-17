@@ -16,12 +16,12 @@ If you encounter any problem following this instruction, please first have a loo
 ```bash
 ## Execute the following commands on your local machine
 cd ~/.ssh
-ssh-keygen -t rsa -b 1024 -f csc4005_rsa -C "{Put Any Comment You Like}"
-ssh-add -K ./csc4005_rsa
+ssh-keygen -t rsa -b 1024 -f csc4180_rsa -C "{Put Any Comment You Like}"
+ssh-add -K ./csc4180_rsa
 ```
 To check if you make it right, type the following command and you should see a string as the output.
 ```bash
-cat ~/.ssh/csc4005_rsa.pub
+cat ~/.ssh/csc4180_rsa.pub
 ```
 **Notes:**
 - Execute ssh-keygen on your own computer instead of the cluster.
@@ -38,7 +38,7 @@ is conflict with the ssh key file you generated before.
 ## 2. Transfer Your SSH Public Key File to the Cluster
 ```bash
 ## Execute the following commands on your local machine
-scp ~/.ssh/csc4005_rsa.pub {Your Student ID}@10.26.200.21:~
+scp ~/.ssh/csc4180_rsa.pub {Your Student ID}@10.26.200.32:~
 ```
 **Notes:**
 - `{Your Student ID}` is where you put your student ID. Do not add the {} brackets in your command.
@@ -47,11 +47,11 @@ scp ~/.ssh/csc4005_rsa.pub {Your Student ID}@10.26.200.21:~
 ## 3. Configure authorized_keys on the Cluster
 ```bash
 ## Login the cluster with password
-ssh {Your Student ID}@10.26.200.21
+ssh -p 2222 {Your Student ID}@10.26.200.32
 ## All the following commands should be executed on the cluster
 mkdir -p ~/.ssh
-cat ./csc4005_rsa.pub >> ~/.ssh/authorized_keys
-rm -f ~/csc4005_rsa.pub
+cat ./csc4180_rsa.pub >> ~/.ssh/authorized_keys
+rm -f ~/csc4180_rsa.pub
 chmod 700 ~/.ssh
 chmod 600 ~/.ssh/authorized_keys
 ```
@@ -63,9 +63,10 @@ cat ~/.ssh/authorized_keys
 ## 4. Prepare for SSH Connection with Key Authentification
 Add the following content to ~/.ssh/config file on your local machine:
 ```bash
-Host CSC4005_cluster
-    HostName 10.26.200.21
-    IdentityFile ~/.ssh/csc4005_rsa
+Host CSC4180_cluster
+    Port 2222
+    HostName 10.26.200.32
+    IdentityFile ~/.ssh/csc4180_rsa
     User {Your Student ID}
 ```
 **Notes:**
@@ -73,11 +74,11 @@ Host CSC4005_cluster
 
 # 5. Login the Cluster Passwordlessly with SSH key Authentification
 ```bash
-ssh {Your Student ID}@10.26.200.21
+ssh -p 2222 {Your Student ID}@10.26.200.32
 ```
 or
 ```bash
-ssh {Your Student ID}@CSC4005_cluster
+ssh {Your Student ID}@CSC4180_cluster
 ```
 
 ## FAQ
@@ -85,7 +86,7 @@ ssh {Your Student ID}@CSC4005_cluster
 
 **Answer:** Execute the following command and you will see detailed debug logs for your SSH connection. Check the logs and see if you could find out what is going wrong and fix it. If you are Mac user, you can also refer to this article [Troubleshooting passwordless login](https://help.dreamhost.com/hc/en-us/articles/215906508-Troubleshooting-passwordless-login) to see if it could help you. If nothing helps, take a screenshot of the output of the command, and send it to [118010200@link.cuhk.edu.cn](mailto:118010200@link.cuhk.edu.cn).
 ```bash
-ssh -vvv {Your Student ID}@10.26.200.21
+ssh -vvv -p 2222 {Your Student ID}@10.26.200.32
 ```
 
 ## Appendix
