@@ -38,7 +38,7 @@ is conflict with the ssh key file you generated before.
 ## 2. Transfer Your SSH Public Key File to the Cluster
 ```bash
 ## Execute the following commands on your local machine
-scp ~/.ssh/csc4180_rsa.pub {Your Student ID}@10.26.200.32:~
+scp -P 2222 ~/.ssh/csc4180_rsa.pub {Your Student ID}@10.26.200.32:~
 ```
 **Notes:**
 - `{Your Student ID}` is where you put your student ID. Do not add the {} brackets in your command.
