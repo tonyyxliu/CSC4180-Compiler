@@ -1,7 +1,6 @@
 -- Input: 1, Expected Output: 55
 begin
-    read (A0);  
-    A1 := A0 + 1;  
+    read (A1);  
     A2 := A1 + 1;  
     A3 := A2 + 1;  
     A4 := A3 + 1;  
@@ -11,5 +10,5 @@ begin
     A8 := A7 + 1;  
     A9 := A8 + 1;  
     A10 := A9 + 1;  
-    write(A0+A1+A2+A3+A4+A5+A6+A7+A8+A9+A10);
+    write(A1+A2+A3+A4+A5+A6+A7+A8+A9+A10);
 end

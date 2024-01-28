@@ -67,21 +67,14 @@ Allowed options: )");
         std::cout << desc << "\n";
         return 0;
     }
-    if (vm.count("cst-only")) {
-        cst_only = 1;
-    }
-    if (vm.count("dot")) {
+    if (vm.count("cst-only")) cst_only = 1;
+    if (vm.count("dot"))
         dot_filename = vm["dot"].as<std::string>();
-        std::cout << "dot file name: " << dot_filename << "\n";
-    }
-    if (vm.count("output")) {
+    if (vm.count("output"))
         ir_filename = vm["output"].as<std::string>();
-        std::cout << "IR output: " << ir_filename << "\n";
-    }
-    if (vm.count("source-program")) {
+    if (vm.count("source-program"))
         source_filename = vm["source-program"].as<std::string>();
-        std::cout << "Source program: " << source_filename << "\n";
-    } else {
+    else {
         std::cerr << "No source program file provided.\n";
         return -1;
     }
