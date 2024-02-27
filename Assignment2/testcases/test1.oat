@@ -1,0 +1,13 @@
+int fact(int x) {
+  var acc = 1;
+  while (x > 0) {
+    acc = acc * x;
+    x = x - 1;
+  }
+  return acc;
+}
+
+int program(int argc, string[] argv) {
+  print_string(string_of_int(fact(5)));
+  return 0;
+}
