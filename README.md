@@ -1,6 +1,6 @@
 # CUHKSZ CSC4180 2024Spring
 
-Hello everyone, welcome to take the course CSC4180: Compiler Construction offered by The Chinese University of HongKong, Shenzhen (CUHK-SZ). In this course, you are going to learn the fundamental basics of compiler and get a hands-on exercise implementing your own compiler for both the Micro language and the simple C language grammar. This course mainly covers the compiler front-end and only gives a very brief introduction to the back-end. To keep our course content up-to-date, LLVM is introduced and you need to build the front-end that finally generates LLVM IR, and then use the LLVM backend to do the optimization and code generation.
+Hello everyone, welcome to take the course CSC4180: Compiler Construction offered by The Chinese University of Hong Kong, Shenzhen (CUHK-SZ). In this course, you are going to learn the fundamental basics of compiler and get a hands-on exercise implementing your compiler for both the Micro language and the simple C language grammar. This course mainly covers the compiler frontend and only gives a very brief introduction to the backend. To keep our course content up-to-date, LLVM is introduced and you need to build the frontend that finally generates LLVM IR, and then use the LLVM backend to do the optimization and code generation.
 
 ## Teaching Assistant
 
@@ -28,13 +28,12 @@ The first four are called compiler front-end, while the last two are called comp
 
 ### Programming Projects (70%)
 
-- **Project 1:** Design a simple compiler for Micro language (HW#1 2/1, Due 2/28)
-- **Project 2:** Design a scanner for a simplified C language (HW#2 2/29, Due 3/20)
-- **Project 3:** Design a parser for a simplified C language (HW#3 3/21, Due 4/10)
-- **Project 4:** Design a simplified C Compiler (HW#4 4/11, Due 5/1)
+- **Project 1:** Implement a simple compiler for Micro language (HW#1 2/1, Due 2/28)
+- **Project 2:** Implement a scanner for Oat v.1 language (HW#2 2/29, Due 3/20)
+- **Project 3:** Implement a parser for Oat v.1 language (HW#3 3/21, Due 4/10)
+- **Project 4:** Implement a compiler frontend for Oat v.1 Language (HW#4 4/11, Due 5/1)
 
 ### Final Exam (25%)
 
 - Scheduled on May 7th, 2024
 - Location to be determined
-
