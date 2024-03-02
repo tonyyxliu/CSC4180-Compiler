@@ -129,6 +129,7 @@ public:
 
     ~NFA();
 
+/* Commonly used components */
     static NFA* from_string(std::string str);
 
     static NFA* from_letter();
@@ -144,8 +145,6 @@ public:
     void set_union(NFA* from);
 
     void set_union(std::set<NFA*> set);
-
-    void set_intersect(NFA* from);
 
     void kleene_star();
 
