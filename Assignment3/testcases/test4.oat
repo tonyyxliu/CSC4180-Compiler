@@ -1,0 +1,6 @@
+int program () {
+    var x = true;
+    var y = false;
+    if (x & !y) { return 0; }
+    else { return -1; }
+}

@@ -1,0 +1,1 @@
+int id ( int id ) { var id = intliteral ; while ( id > intliteral ) { id = id * id ; id = id - intliteral ; } return id ; } int id ( int id , string [ ] id ) { id ( id ( id ( intliteral ) ) ) ; return intliteral ; }

@@ -1,0 +1,1 @@
+int id ( ) { var id = true ; var id = false ; if ( id & ! id ) { return intliteral ; } else { return - intliteral ; } }

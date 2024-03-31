@@ -1,0 +1,95 @@
+prog ::= decl prog
+prog ::= ''
+decl ::= gdecl
+decl ::= fdecl
+gdecl ::= global id = gexp ;
+fdecl ::= t id ( args ) block
+args ::= arg args'
+args ::= ''
+args' ::= , arg args'
+args' ::= ''
+arg ::= t id
+block ::= { stmts }
+
+t ::= primary_t t_arr
+t_arr ::= [ ]
+t_arr ::= ''
+primary_t ::= int
+primary_t ::= bool
+primary_t ::= string
+
+gexps ::= gexp gexps'
+gexps ::= ''
+gexps' ::= , gexp gexps'
+gexps' ::= ''
+gexp ::= intliteral
+gexp ::= stringliteral
+gexp ::= t null
+gexp ::= true
+gexp ::= false
+gexp ::= new t { gexps }
+stmts ::= stmt stmts
+stmts ::= ''
+
+stmt ::= id stmt'
+stmt' ::= func_call arr_idx assign ;
+func_call ::= ''
+func_call ::= ( exps )
+arr_idx ::= ''
+arr_idx ::= [ exp ]
+assign ::= = exp
+assign ::= ''
+stmt ::= vdecl ;
+stmt ::= return exp ;
+stmt ::= if_stmt
+stmt ::= for ( vdecls ; exp_opt ; stmt_opt ) block
+stmt ::= while ( exp ) block
+stmt_opt ::= stmt
+stmt_opt ::= ''
+
+if_stmt ::= if ( exp ) block else_stmt
+else_stmt ::= ''
+else_stmt ::= else else_body
+else_body ::= block
+else_body ::= if_stmt
+exp_opt ::= exp
+exp_opt ::= ''
+vdecls ::= vdecl vdecls
+vdecls ::= ''
+vdecl ::= var id = exp
+
+exps ::= exp exps'
+exps' ::= , exp exps'
+exps' ::= ''
+exp ::= term exp'
+exp' ::= bop term exp'
+exp' ::= ''
+term ::= primary
+term ::= uop primary
+primary ::= id func_call arr_idx
+primary ::= intliteral
+primary ::= stringliteral
+primary ::= t null
+primary ::= true 
+primary ::= false
+primary ::= ( exp ) 
+
+bop ::= *
+bop ::= +
+bop ::= -
+bop ::= <<
+bop ::= >>
+bop ::= >>>
+bop ::= <
+bop ::= <=
+bop ::= >
+bop ::= >=
+bop ::= ==
+bop ::= !=
+bop ::= &
+bop ::= |
+bop ::= [&]
+bop ::= [|]
+uop ::= -
+uop ::= !
+uop ::= ~

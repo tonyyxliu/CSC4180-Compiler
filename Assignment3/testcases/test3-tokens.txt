@@ -1,0 +1,1 @@
+int id ( int id , int id ) { if ( id >= id ) { if ( id == id ) { id ( stringliteral ) ; } return id ; } else { return id ; } } int id ( ) { var id = id ( id ( intliteral , intliteral ) , id ( intliteral , intliteral ) ) ; }

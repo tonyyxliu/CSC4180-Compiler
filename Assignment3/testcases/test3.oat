@@ -1,0 +1,11 @@
+int max(int x int y) {
+    if (x >= y) {
+        if (x == y) { print_string("EQUAL"); }
+        return x;
+    }
+    else { return y; }
+}
+
+int main() {
+    var x = max(max(10, 5), max(5, 10));
+}

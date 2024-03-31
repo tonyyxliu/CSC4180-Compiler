@@ -1,0 +1,16 @@
+int[] f(int[] x, int[] y, bool b) {
+  if ( b ) {
+    return x;
+  } else {
+    return y;
+  }
+}
+
+global x = new int[]{1, 2, 3};
+global y = new int[]{4, 5, 6};
+
+int program (int argc, string[] argv) {
+  f(x, y, true)[0] = 17;     /* non-trivial lhs */
+  var z = f(x, y, true)[0] + f(y, x, false)[0];
+  return z;  /* returns the value 34 */
+}
