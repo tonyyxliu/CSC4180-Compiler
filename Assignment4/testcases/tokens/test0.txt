@@ -1,0 +1,20 @@
+TINT int
+ID main
+LPAREN (
+RPAREN )
+LBRACE {
+VAR var
+ID str
+ASSIGN =
+STRINGLITERAL "hello world!"
+SEMICOLON ;
+ID print_string
+LPAREN (
+ID str
+RPAREN )
+SEMICOLON ;
+RETURN return
+INTLITERAL 0
+SEMICOLON ;
+RBRACE }
+SCANEOF

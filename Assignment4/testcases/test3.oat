@@ -1,0 +1,14 @@
+int main() {
+    var y = 5;
+    print_int(y);
+    print_string("\n");
+    if (y > 0) {
+        var is_y_positive = true;
+        print_bool(is_y_positive);
+    }
+    else {
+        var is_y_positive = false;
+        print_bool(is_y_positive);
+    }
+    return 0;
+}

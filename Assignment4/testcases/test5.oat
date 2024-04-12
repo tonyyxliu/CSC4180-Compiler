@@ -1,0 +1,8 @@
+int main() {
+    var value = 10;
+    while (value > 0) {
+        print_int(value);
+        print_string("\n");
+    }
+    return 0;
+}

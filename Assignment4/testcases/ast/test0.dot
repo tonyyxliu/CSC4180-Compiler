@@ -1,0 +1,31 @@
+digraph AST {
+node0 [label="<program>",lexeme=""];
+node1 [label="<function_decl>",lexeme=""];
+node2 [label="int",lexeme=""];
+node1 -> node2;
+node3 [label="ID",lexeme="main"];
+node1 -> node3;
+node4 [label="<args>",lexeme=""];
+node1 -> node4;
+node5 [label="<stmts>",lexeme=""];
+node6 [label="<var_decl>",lexeme=""];
+node7 [label="ID",lexeme="str"];
+node6 -> node7;
+node8 [label="STRINGLITERAL",lexeme="hello world!"];
+node6 -> node8;
+node5 -> node6;
+node9 [label="<func call>",lexeme=""];
+node10 [label="ID",lexeme="print_string"];
+node9 -> node10;
+node11 [label="<exps>",lexeme=""];
+node12 [label="ID",lexeme="str"];
+node11 -> node12;
+node9 -> node11;
+node5 -> node9;
+node13 [label="RETURN",lexeme=""];
+node14 [label="INTLITERAL",lexeme="0"];
+node13 -> node14;
+node5 -> node13;
+node1 -> node5;
+node0 -> node1;
+}

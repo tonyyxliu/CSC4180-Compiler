@@ -1,0 +1,5 @@
+int main() { 
+    var str = "hello world!";
+    print_string(str);
+    return 0;
+}

@@ -1,0 +1,8 @@
+global x = 5;
+
+int main() {
+    print_int(x);
+    var x = 10;
+    print_int(x);
+    return x;
+}
