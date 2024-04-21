@@ -3,6 +3,7 @@ int main() {
     while (value > 0) {
         print_int(value);
         print_string("\n");
+        value = value - 1;
     }
     return 0;
 }
