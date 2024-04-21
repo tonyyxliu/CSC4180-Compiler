@@ -121,7 +121,7 @@ class SymbolTable:
         if len(self.scopes) != len(self.scope_ids):
             raise ValueError("Mismatch size of symbol_table and id_table")
         for table_idx in range(len(self.scopes) - 1, -1, -1):
-            if id in self.scopes[table_idx]:
+            if lexeme in self.scopes[table_idx]:
                 unique_name = self.unique_name(lexeme, self.scope_ids[table_idx])
                 type = self.scopes[table_idx][lexeme]
                 return unique_name, type
