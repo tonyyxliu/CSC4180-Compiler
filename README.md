@@ -6,8 +6,8 @@ Hello everyone, welcome to take the course CSC4180: Compiler Construction offere
 
 ### Mr. Liu Yuxuan
 Email: yuxuanliu1@link.cuhk.edu.cn
-Office Hour: 8:00 P.M. to 9:00 P.M., every Thursday
-Office Location: TA107
+Office Hour: 7:00 P.M. to 8:00 P.M., every Thursday
+Office Location: TD409 Seat.08
 
 ## Six Compiler Phases
 
@@ -24,16 +24,16 @@ The first four are called compiler front-end, while the last two are called comp
 
 ### Class Participation (5%)
 
-- Roll Call in Lecture on April 30th, 2024
+- Roll Call in Lecture on April 29th, 2025
 
 ### Programming Projects (70%)
 
-- **Project 1:** Implement a simple compiler for Micro language (HW#1 2/1, Due 2/28)
-- **Project 2:** Implement a scanner for Oat v.1 language (HW#2 2/29, Due 3/20)
-- **Project 3:** Implement a parser for Oat v.1 language (HW#3 3/21, Due 4/10)
-- **Project 4:** Implement a compiler frontend for Oat v.1 Language (HW#4 4/11, Due 5/1)
+- **Project 1:** Implement a simple compiler for Micro language (HW#1 2/11, Due 2/24)
+- **Project 2:** Implement a scanner for Oat v.1 language (HW#2 2/25, Due 3/17)
+- **Project 3:** Implement a parser for Oat v.1 language (HW#3 3/18, Due 4/7)
+- **Project 4:** Implement a compiler frontend for Oat v.1 Language (HW#4 4/8, Due 4/28)
 
 ### Final Exam (25%)
 
-- Scheduled on May 7th, 2024
+- Scheduled on May 6th, 2025
 - Location to be determined
