@@ -44,6 +44,8 @@ int main(int argc, char const *argv[]) {
         scanner.add_token("}", RBRACE);
         scanner.add_token(";", SEMICOLON);
         scanner.add_token(",", COMMA);
+        scanner.add_token("true", TRUE);
+        scanner.add_token("false", FALSE);
         /* Binary Operators */
         scanner.add_token("*", STAR, 100);
         scanner.add_token("+", PLUS, 90);
@@ -57,8 +59,10 @@ int main(int argc, char const *argv[]) {
         scanner.add_token(">=", GREATEQ, 70);
         scanner.add_token("==", EQ, 60);
         scanner.add_token("!=", NEQ, 60);
+        scanner.add_token("!", NOT, 60);
         scanner.add_token("&", LAND, 50);
         scanner.add_token("|", LOR, 40);
+        scanner.add_token("~", TILDE, 35);
         scanner.add_token("[&]", BAND, 30);
         scanner.add_token("[|]", BOR, 20);
         /* Other Token Classes */
