@@ -81,7 +81,7 @@ ID x
 COMMA ,
 ID y
 COMMA ,
-ID true
+TRUE true
 RPAREN )
 LBRACKET [
 INTLITERAL 0
@@ -99,7 +99,7 @@ ID x
 COMMA ,
 ID y
 COMMA ,
-ID true
+TRUE true
 RPAREN )
 LBRACKET [
 INTLITERAL 0
@@ -111,7 +111,7 @@ ID y
 COMMA ,
 ID x
 COMMA ,
-ID false
+FALSE false
 RPAREN )
 LBRACKET [
 INTLITERAL 0

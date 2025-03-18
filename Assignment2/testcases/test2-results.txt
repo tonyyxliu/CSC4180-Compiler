@@ -81,7 +81,7 @@ ID x
 COMMA ,
 ID y
 COMMA ,
-ID true
+TRUE true
 RPAREN )
 LBRACKET [
 INTLITERAL 0
