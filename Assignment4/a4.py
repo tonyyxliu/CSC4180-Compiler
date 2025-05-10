@@ -314,49 +314,49 @@ def declare_runtime_functions():
     # map function unique name in global scope to the function body
     # the global scope should have scope_id = 1 
     func = ir.Function(module, func_type, name="array_of_string")
-    ir_map[SymbolTable.unique_name("array_of_string", 1)] = func
+    ir_map[symbol_table.unique_name("array_of_string", 1)] = func
     # char* string_of_array (int32_t *arr)
     func_type = ir.FunctionType(
         ir.PointerType(ir.IntType(8)),      # return type
         [ir.PointerType(ir.IntType(32))])   # args type
     func = ir.Function(module, func_type, name="string_of_array")
-    ir_map[SymbolTable.unique_name("string_of_array", 1)] = func
+    ir_map[symbol_table.unique_name("string_of_array", 1)] = func
     # int32_t length_of_string (char *str)
     func_type = ir.FunctionType(
-        ir.IntType(32)                      # return type
+        ir.IntType(32),                     # return type
         [ir.PointerType(ir.IntType(8))])    # args type
     func = ir.Function(module, func_type, name="length_of_string")
-    ir_map[SymbolTable.unique_name("length_of_string", 1)] = func
+    ir_map[symbol_table.unique_name("length_of_string", 1)] = func
     # char* string_of_int(int32_t i)
     func_type = ir.FunctionType(
         ir.PointerType(ir.IntType(8)),      # return type
         [ir.IntType(32)])                   # args type
     func = ir.Function(module, func_type, name="string_of_int")
-    ir_map[SymbolTable.unique_name("string_of_int", 1)] = func
+    ir_map[symbol_table.unique_name("string_of_int", 1)] = func
     # char* string_cat(char* l, char* r)
     func_type = ir.FunctionType(
         ir.PointerType(ir.IntType(8)),      # return tyoe
         [ir.PointerType(ir.IntType(8)), ir.PointerType(ir.IntType(8))]) # args type
     func = ir.Function(module, func_type, name="string_cat")
-    ir_map[SymbolTable.unique_name("string_cat", 1)] = func
+    ir_map[symbol_table.unique_name("string_cat", 1)] = func
     # void print_string (char* str)
     func_type = ir.FunctionType(
         ir.VoidType(),                      # return type
         [ir.PointerType(ir.IntType(8))])    # args type
     func = ir.Function(module, func_type, name="print_string")
-    ir_map[SymbolTable.unique_name("print_string", 1)] = func
+    ir_map[symbol_table.unique_name("print_string", 1)] = func
     # void print_int (int32_t i)
     func_type = ir.FunctionType(
         ir.VoidType(),                      # return type
         [ir.IntType(32)])                   # args type
     func = ir.Function(module, func_type, name="print_int")
-    ir_map[SymbolTable.unique_name("print_int", 1)] = func
+    ir_map[symbol_table.unique_name("print_int", 1)] = func
     # void print_bool (int32_t i)
     func_type = ir.FunctionType(
         ir.VoidType(),                      # return type
         [ir.IntType(32)])                   # args type
     func = ir.Function(module, func_type, name="print_bool")
-    ir_map[SymbolTable.unique_name("print_bool", 1)] = func
+    ir_map[symbol_table.unique_name("print_bool", 1)] = func
 
 def codegen(node):
     """
@@ -377,7 +377,7 @@ def codegen(node):
     if codegen_func:
         codegen_func(node)
     else:
-        default_handler(node)
+        codegen_handler_default(node)
 
 # Some sample handler functions for IR codegen
 # TODO: implement more handler functions for various node types
