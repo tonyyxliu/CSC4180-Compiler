@@ -421,8 +421,12 @@ def semantic_analysis(node):
     if handler:
         handler(node)
     else:
-        default_handler(node)
+        semantic_handler_default(node)
     return node.datatype
+
+def semantic_handler_default(node):
+    for child in node.children:
+        semantic_analysis(child)
 
 def semantic_handler_program(node):
     symbol_table.push_scope()
@@ -456,10 +460,6 @@ def semantic_handler_bool(node):
 
 def semantic_handler_string(node):
     node.datatype = DataType.STRING
-
-def default_handler(node):
-    for child in node.children:
-        semantic_analysis(child)
 
 if len(sys.argv) == 3:
     # visualize AST before semantic analysis
